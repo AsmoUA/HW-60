@@ -33,7 +33,7 @@ const app = express();
 
 app.get('/', async (req, res) => {
     try {
-        const content = await fs.promises.readFile(path.join(__dirname, './package.json'));
+        const content = await promises.readFile(path.join(__dirname, './package.json'));
         res.send(`<h1>Welcome</h1><h2>JSON text:</h2><pre>${content.toString()}</pre>`);
     } catch (err) {
         console.error(err);
